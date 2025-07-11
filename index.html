@@ -6,21 +6,39 @@
   <title>Oliver & Rebeca</title>
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
-    html, body {width: 100%; height: 100%; overflow: hidden; background: #000;}
-    .slide {position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: fade 32s infinite;}
-    .slide:nth-child(1) {animation-delay: 0s;}
-    .slide:nth-child(2) {animation-delay: 8s;}
-    .slide:nth-child(3) {animation-delay: 16s;}
-    .slide:nth-child(4) {animation-delay: 24s;}
-    @keyframes fade {
-      0%, 100% {opacity: 0;}
-      5% {opacity: 1;}
-      25% {opacity: 1;}
-      30% {opacity: 0;}
+    html, body {width: 100%; height: 100%; background: #000; color: #fff; overflow: hidden; display: flex; justify-content: center; align-items: center; flex-direction: column; font-family: 'Helvetica Neue', sans-serif;}
+    .line {opacity: 0; animation: appear 6s forwards;}
+    .line:nth-child(1) {animation-delay: 0s;}
+    .line:nth-child(2) {animation-delay: 4s;}
+    .line:nth-child(3) {animation-delay: 8s;}
+    .line:nth-child(4) {animation-delay: 12s;}
+    @keyframes appear {
+      0% {opacity: 0;}
+      50% {opacity: 1;}
+      100% {opacity: 1;}
     }
-    .text {
-      position: absolute; bottom: 50px; width: 100%; text-align: center;
-      color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5rem; text-shadow: 0 0 10px #000;
+    .background {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+    .background img {
+      position: absolute;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fadeBG 32s infinite;
+    }
+    .background img:nth-child(1) {animation-delay: 0s;}
+    .background img:nth-child(2) {animation-delay: 8s;}
+    .background img:nth-child(3) {animation-delay: 16s;}
+    .background img:nth-child(4) {animation-delay: 24s;}
+    @keyframes fadeBG {
+      0%, 100% {opacity: 0;}
+      5% {opacity: 0.3;}
+      25% {opacity: 0.3;}
+      30% {opacity: 0;}
     }
   </style>
 </head>
@@ -28,13 +46,15 @@
   <audio autoplay loop>
     <source src="sua_musica.mp3" type="audio/mpeg">
   </audio>
-  <img src="foto1.jpg" class="slide">
-  <img src="foto2.jpg" class="slide">
-  <img src="foto3.jpg" class="slide">
-  <img src="foto4.jpg" class="slide">
-  <div class="text">
-    Oliver & Rebeca — Desde 13/04/2025<br>
-    "Te adoro em tudo, tudo, tudo..." — Djavan
+  <div class="background">
+    <img src="foto1.jpg">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
   </div>
+  <div class="line">“Quando duas almas se encontram,</div>
+  <div class="line">o tempo para,</div>
+  <div class="line">o mundo silencia,</div>
+  <div class="line">e só o amor fala.”<br>Oliver & Rebeca — Desde 13/04/2025</div>
 </body>
 </html>

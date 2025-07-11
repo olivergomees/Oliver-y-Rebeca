@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliver & Rebeca</title>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    html, body {width: 100%; height: 100%; overflow: hidden; background: #000;}
+    .slide {position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: fade 32s infinite;}
+    .slide:nth-child(1) {animation-delay: 0s;}
+    .slide:nth-child(2) {animation-delay: 8s;}
+    .slide:nth-child(3) {animation-delay: 16s;}
+    .slide:nth-child(4) {animation-delay: 24s;}
+    @keyframes fade {
+      0%, 100% {opacity: 0;}
+      5% {opacity: 1;}
+      25% {opacity: 1;}
+      30% {opacity: 0;}
+    }
+    .text {
+      position: absolute; bottom: 50px; width: 100%; text-align: center;
+      color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size: 1.5rem; text-shadow: 0 0 10px #000;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="sua_musica.mp3" type="audio/mpeg">
+  </audio>
+  <img src="foto1.jpg" class="slide">
+  <img src="foto2.jpg" class="slide">
+  <img src="foto3.jpg" class="slide">
+  <img src="foto4.jpg" class="slide">
+  <div class="text">
+    Oliver & Rebeca — Desde 13/04/2025<br>
+    "Te adoro em tudo, tudo, tudo..." — Djavan
+  </div>
+</body>
+</html>
